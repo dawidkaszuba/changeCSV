@@ -139,6 +139,61 @@ public class CSVChanger {
         }
     }
 
+    public static void addSignsByStartedIndex(int index,String file, String newFile, int columnNumber,String signs){
+
+        try {
+
+            FileReader filereader = new FileReader(file);
+
+
+            CSVReader csvReader = new CSVReader(filereader);
+            String[] nextRecord;
+            String cell;
+
+            while ((nextRecord = csvReader.readNext()) != null) {
+
+                StringBuilder stringBuilder = new StringBuilder();
+
+                for (int i = 0; i < nextRecord.length; i++) {
+                    stringBuilder.append(nextRecord[i]).append(';');
+                }
+
+                String[] parts = stringBuilder.toString().split(";");
+
+                for(int j = 0; j < parts.length; j++){
+
+                    if(j == columnNumber-1){
+                        int indexNumb;
+
+                        if(index==0){
+                            cell = signs + parts[j];
+                            parts[j] = cell;
+                        }
+                        else{
+                            if(parts[j].length() < index){
+                                indexNumb= parts[j].length();
+                                cell = parts[j].substring(0,indexNumb) + signs;
+                                parts[j] = cell;
+
+                            }else{
+                                indexNumb=index;
+                                cell = parts[j].substring(0,indexNumb) + signs + parts[j].substring(indexNumb);
+                                parts[j] = cell;
+                            }
+                        }
+                    }
+                }
+
+                saveRowtoFile(newFile,parts);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
     public static void saveRowtoFile(String file, String[] dataToSave){
 
         try{

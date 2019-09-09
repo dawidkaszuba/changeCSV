@@ -3,7 +3,7 @@ package pl.dawidkaszuba;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
-public class RemoveNumbersController {
+public class AddSignsController {
 
     private MainController mainController;
 
@@ -13,6 +13,10 @@ public class RemoveNumbersController {
     private TextField outputPath;
     @FXML
     private TextField columnNumber;
+    @FXML
+    private TextField signs;
+    @FXML
+    private TextField index;
 
 
     @FXML
@@ -21,15 +25,21 @@ public class RemoveNumbersController {
     }
 
     @FXML
-    private void handleBtnRemoveNumbers(){
+    private void handleBtnAddSigns(){
 
-        String inputPathFild = inputPath.getText();
+        String inputPathField = inputPath.getText();
         String outputPathField = outputPath.getText();
         String columnNumberFiled = columnNumber.getText();
+        String signsField = signs.getText();
+        String indexField = index.getText();
 
-        CSVChanger.removeNumbers(inputPathFild,outputPathField,Integer.parseInt(columnNumberFiled));
+        CSVChanger.addSignsByStartedIndex(Integer.parseInt(indexField),
+                inputPathField,outputPathField,
+                Integer.parseInt(columnNumberFiled),signsField);
         mainController.loadMainScreen();
     }
+
+
 
     public void setMainController(MainController mainController) {
         this.mainController = mainController;

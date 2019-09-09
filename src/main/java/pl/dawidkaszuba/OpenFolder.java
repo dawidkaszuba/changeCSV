@@ -6,7 +6,6 @@ import java.io.IOException;
 
 public class OpenFolder {
 
-
     public static void open(String filePath){
 
             Desktop desktop = Desktop.getDesktop();

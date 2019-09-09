@@ -24,8 +24,6 @@ public class MenuController {
         RemoveNumbersController removeNumbersController = loader.getController();
         removeNumbersController.setMainController(mainController);
         mainController.setScreen(pane);
-
-
     }
 
 
@@ -47,6 +45,16 @@ public class MenuController {
 
     @FXML
     public void addSigns(){
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/addSigns.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        AddSignsController addSignsController = loader.getController();
+        addSignsController.setMainController(mainController);
+        mainController.setScreen(pane);
 
     }
 
