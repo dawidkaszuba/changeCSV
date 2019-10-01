@@ -59,6 +59,21 @@ public class MenuController {
     }
 
     @FXML
+    public void copyNumbers(){
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/copyNumbers.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        CopyNumbersController copyNumbers = loader.getController();
+        copyNumbers.setMainController(mainController);
+        mainController.setScreen(pane);
+
+    }
+
+    @FXML
     public void exit(){
         Platform.exit();
     }

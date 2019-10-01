@@ -3,7 +3,7 @@ package pl.dawidkaszuba;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
-public class CopyNumbers {
+public class CopyNumbersController {
 
 
 
@@ -25,11 +25,11 @@ public class CopyNumbers {
     @FXML
     private void handleBtnCopyNumbers(){
 
-        String inputPathFild = inputPath.getText();
+        String inputPathField = inputPath.getText();
         String outputPathField = outputPath.getText();
         String columnNumberFiled = columnNumber.getText();
 
-        CSVChanger.removeNumbers(inputPathFild,outputPathField,Integer.parseInt(columnNumberFiled));
+        CSVChanger.copyNumbers(inputPathField,outputPathField,Integer.parseInt(columnNumberFiled));
         mainController.loadMainScreen();
     }
 
