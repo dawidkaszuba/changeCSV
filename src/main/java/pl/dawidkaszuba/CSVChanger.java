@@ -148,7 +148,7 @@ public class CSVChanger {
 
             CSVReader csvReader = new CSVReader(filereader);
             String[] nextRecord;
-            String pattern =" \\d+\\/\\d+\\w+| \\d+ \\w+| \\d+\\w+\\/\\d| \\d+\\/\\d+| \\d+\\w+| \\d+";
+            String pattern ="\\d+| \\d+\\/\\d+\\w+| \\d+ \\w+| \\d+\\w+\\/\\d| \\d+\\/\\d+| \\d+\\w+| \\d+";
 
 
             while ((nextRecord = csvReader.readNext()) != null) {
