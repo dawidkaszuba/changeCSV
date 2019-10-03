@@ -270,6 +270,40 @@ public class CSVChanger {
 
     }
 
+    public static void multiply(String newFile,String file){
+
+        try {
+
+            FileReader filereader = new FileReader(file);
+
+
+            CSVReader csvReader = new CSVReader(filereader);
+            String[] nextRecord;
+
+            while ((nextRecord = csvReader.readNext()) != null) {
+
+                StringBuilder stringBuilder = new StringBuilder();
+
+                for (int i = 0; i < nextRecord.length; i++) {
+                    stringBuilder.append(nextRecord[i]).append(';');
+                }
+
+                String[] parts = stringBuilder.toString().split(";");
+
+                    for(int i = 0; i < 11;i++){
+                        saveRowtoFile(newFile,parts);
+                    }
+
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
+    }
+
     public static void saveRowtoFile(String file, String[] dataToSave){
 
         try{
