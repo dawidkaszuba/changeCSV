@@ -11,6 +11,8 @@ public class MultiplyRowsController {
     private TextField inputPath;
     @FXML
     private TextField outputPath;
+    @FXML
+    private TextField repetitionsNumber;
 
 
     @FXML
@@ -23,8 +25,9 @@ public class MultiplyRowsController {
 
         String inputPathField = inputPath.getText();
         String outputPathField = outputPath.getText();
+        int repetitionsNumberField = Integer.parseInt(repetitionsNumber.getText());
 
-        CSVChanger.multiply(outputPathField, inputPathField);
+        CSVChanger.multiply(outputPathField, inputPathField,repetitionsNumberField);
         mainController.loadMainScreen();
     }
 

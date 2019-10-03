@@ -270,7 +270,7 @@ public class CSVChanger {
 
     }
 
-    public static void multiply(String newFile,String file){
+    public static void multiply(String newFile,String file, int repetitionsNumber){
 
         try {
 
@@ -290,7 +290,7 @@ public class CSVChanger {
 
                 String[] parts = stringBuilder.toString().split(";");
 
-                    for(int i = 0; i < 11;i++){
+                    for(int i = 0; i < repetitionsNumber;i++){
                         saveRowtoFile(newFile,parts);
                     }
 
