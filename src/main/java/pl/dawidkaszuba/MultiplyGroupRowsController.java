@@ -3,7 +3,7 @@ package pl.dawidkaszuba;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
-public class MultiplyRowsController {
+public class MultiplyGroupRowsController {
 
     private MainController mainController;
 
@@ -30,7 +30,7 @@ public class MultiplyRowsController {
         int numberOfAbandonedRowsField = Integer.parseInt(numberOfAbandonedRows.getText());
         int repetitionsNumberField = Integer.parseInt(repetitionsNumber.getText());
 
-        CSVChanger.multiply(outputPathField, inputPathField,repetitionsNumberField,numberOfAbandonedRowsField);
+        CSVChanger.multiplyGoupRows(outputPathField, inputPathField,repetitionsNumberField,numberOfAbandonedRowsField);
         mainController.loadMainScreen();
     }
 

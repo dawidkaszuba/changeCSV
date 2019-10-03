@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.dawidkaszuba.MultiplyRowsController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.dawidkaszuba.MultiplyGroupRowsController">
    <children>
       <TextField fx:id="inputPath" layoutX="19.0" layoutY="69.0" prefHeight="26.0" prefWidth="366.0" />
       <Label layoutX="17.0" layoutY="45.0" text="ścieżka pliku:" />
@@ -17,7 +17,7 @@
       <Text layoutX="8.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DK" />
       <TextField fx:id="repetitionsNumber" layoutX="19.0" layoutY="220.0" prefHeight="26.0" prefWidth="114.0" />
       <Label layoutX="23.0" layoutY="192.0" text="ilość powtórzeń:" />
-      <TextField fx:id="numberOfAbandonedRows" layoutX="19.0" layoutY="300.0" prefHeight="26.0" prefWidth="62.0" />
+      <TextField fx:id="numberOfAbandonedRows" layoutX="19.0" layoutY="300.0" prefHeight="26.0" prefWidth="80.0" />
       <Label layoutX="23.0" layoutY="266.0" text="ilość opuszczonych wierszy" />
    </children>
 </Pane>

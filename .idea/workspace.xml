@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b705b1c3-ae29-4fab-99ff-ee4a649dc024" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/dawidkaszuba/MultiplyGroupRowsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/multiplyGroupRows.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/dawidkaszuba/CSVChanger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/dawidkaszuba/CSVChanger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/dawidkaszuba/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/dawidkaszuba/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/dawidkaszuba/MultiplyRowsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/dawidkaszuba/MultiplyRowsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/MenuScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/MenuScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/multiplyRows.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/multiplyRows.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/MenuScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/MenuScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/multiplyRows.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/multiplyRows.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/dawidkaszuba/CSVChanger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/dawidkaszuba/CSVChanger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/dawidkaszuba/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/dawidkaszuba/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/dawidkaszuba/MultiplyRowsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/dawidkaszuba/MultiplyRowsController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -37,10 +49,18 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/fxml" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/fxml" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pl.dawidkaszuba" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

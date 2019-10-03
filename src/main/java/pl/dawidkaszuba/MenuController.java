@@ -88,6 +88,24 @@ public class MenuController {
 
     }
 
+
+
+
+    @FXML
+    public void multiplyGoupRows(){
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/multiplyGroupRows.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        MultiplyGroupRowsController multiplyGroupRowsController = loader.getController();
+        multiplyGroupRowsController.setMainController(mainController);
+        mainController.setScreen(pane);
+
+    }
+
     @FXML
     public void exit(){
         Platform.exit();

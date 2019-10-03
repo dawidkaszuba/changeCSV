@@ -270,7 +270,7 @@ public class CSVChanger {
 
     }
 
-    public static void multiply(String newFile,String file, int repetitionsNumber){
+    public static void multiplyGoupRows(String newFile,String file, int repetitionsNumber, int numberOfAbandonedRows){
 
         try {
 
@@ -279,8 +279,11 @@ public class CSVChanger {
 
             CSVReader csvReader = new CSVReader(filereader);
             String[] nextRecord;
+            int row=0;
+            String[][] all = new String[repetitionsNumber+1][];
 
             while ((nextRecord = csvReader.readNext()) != null) {
+                row++;
 
                 StringBuilder stringBuilder = new StringBuilder();
 
@@ -290,9 +293,17 @@ public class CSVChanger {
 
                 String[] parts = stringBuilder.toString().split(";");
 
-                    for(int i = 0; i < repetitionsNumber;i++){
-                        saveRowtoFile(newFile,parts);
+                all[row-1] = parts;
+
+            }
+
+            for (int j = 0; j < repetitionsNumber; j++){
+
+                for(int k = 0; k < all.length; k++){
+                    if(k > numberOfAbandonedRows-1) {
+                        saveRowtoFile(newFile, all[k]);
                     }
+                }
 
             }
         }
@@ -302,6 +313,40 @@ public class CSVChanger {
 
 
 
+    }
+
+    public static void multiply(String newFile,String file, int repetitionsNumber, int numberOfAbandonedRows){
+        try {
+
+            FileReader filereader = new FileReader(file);
+
+
+            CSVReader csvReader = new CSVReader(filereader);
+            String[] nextRecord;
+            int row = 0;
+
+
+            while ((nextRecord = csvReader.readNext()) != null) {
+                row++;
+                StringBuilder stringBuilder = new StringBuilder();
+
+                for (int i = 0; i < nextRecord.length; i++) {
+                    stringBuilder.append(nextRecord[i]).append(';');
+                }
+
+                String[] parts = stringBuilder.toString().split(";");
+
+                for(int i = 0; i < repetitionsNumber;i++){
+                    if(row > numberOfAbandonedRows) {
+                        saveRowtoFile(newFile, parts);
+                    }
+                }
+
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void saveRowtoFile(String file, String[] dataToSave){
