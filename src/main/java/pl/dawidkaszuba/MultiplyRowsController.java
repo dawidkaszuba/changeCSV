@@ -11,12 +11,6 @@ public class MultiplyRowsController {
     private TextField inputPath;
     @FXML
     private TextField outputPath;
-    @FXML
-    private TextField columnNumber;
-    @FXML
-    private TextField signs;
-    @FXML
-    private TextField index;
 
 
     @FXML
@@ -30,7 +24,7 @@ public class MultiplyRowsController {
         String inputPathField = inputPath.getText();
         String outputPathField = outputPath.getText();
 
-        CSVChanger.multiply(inputPathField,outputPathField);
+        CSVChanger.multiply(outputPathField, inputPathField);
         mainController.loadMainScreen();
     }
 

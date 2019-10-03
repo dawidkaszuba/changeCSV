@@ -74,6 +74,21 @@ public class MenuController {
     }
 
     @FXML
+    public void multiply(){
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/multiplyRows.fxml"));
+        Pane pane = null;
+        try {
+            pane = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        MultiplyRowsController multiplyRowsController = loader.getController();
+        multiplyRowsController.setMainController(mainController);
+        mainController.setScreen(pane);
+
+    }
+
+    @FXML
     public void exit(){
         Platform.exit();
     }
